@@ -56,6 +56,7 @@ async def process_user_message(message, user_id):
     try:
         if "新聞" in message:
             # 呼叫 fetch_news_data 函數來獲取新聞
+            logging.error(f"Error processing user message: {a}")
             news_response = fetch_news_data("性別歧視", news_api_key)
             if news_response and news_response.get("status") == "ok":
                 articles = news_response.get("articles", [])
@@ -64,6 +65,7 @@ async def process_user_message(message, user_id):
                     return f"最新新聞：\n\n標題: {top_article['title']}\n描述: {top_article['description']}\n\n更多詳情: {top_article['url']}"
                     
         elif "更多" in message:
+            logging.error(f"Error processing user message: {b}")
             news_response = fetch_news_data("性別", news_api_key)
             if news_response and news_response.get("status") == "ok":
                 newsNo = random.randint(1, 50)
