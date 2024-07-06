@@ -78,6 +78,24 @@ async def process_user_message(message, user_id):
             # 生成基於新聞的故事
             response = await generate_story_based_on_news(news_api_key, gmini_api_key)
             return response if response else "生成故事時出現錯誤。"
+
+        elif "情境模擬" or "模擬" in message:
+            return 0
+
+        elif "小葉的故事" in message:
+            return 0
+            
+        elif "B-1" or "B-2" in message:
+            return "無論選擇A或B，小葉都在朋友的支持下變得更加堅強和自信。然而，校園中的霸凌問題依然存在，甚至在某些情況下變得更加嚴重。\n這時，他和朋友們面臨著一個重要的決定：他們是應該大聲疾呼，讓更多人知道這個問題，還是繼續低調行事，慢慢改變周圍的環境？"
+            return "選擇A：公開發聲/n小葉和他的朋友們決定公開發聲，利用社交媒體和校報等平台，引起更多人的關注，呼籲大家共同對抗霸凌，推動性別平等。/n/n選擇B：低調處理/n小葉和他的朋友們決定低調行事，專注於自己的小組活動，默默地支持彼此，希望通過潛移默化的方式來改變周圍人的態度。"
+            
+        elif "B-3" in message:
+            return "小葉和他的朋友們公開發聲後，成功地引起了更廣泛的關注。他們的行動不僅影響了學校，還推動了社會的變革，最終推動了性別平等運動的進展。小葉的故事成為了鼓舞更多人的力量，他們一起為性別平等而努力，並取得了顯著的成效。"
+            return "https://www.parenting.com.tw/article/5092375"
+
+        elif "B-4" in message::
+            return "小葉和他的朋友們低調處理後，創建了一個友善和包容的小圈子。他們的影響範圍雖然有限，但這種變化是真實而深遠的。小葉在朋友的支持下，逐漸成長為一個堅強和自信的人。他們的小圈子成為了一個溫暖的避風港，讓更多人感受到平等和包容的力量。"
+            return "https://www.parenting.com.tw/article/5092375"
         
         else:
             # 生成基於用戶輸入的通用回應
