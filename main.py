@@ -69,6 +69,10 @@ async def process_user_message(message, user_id):
             response = story_C(message)
             return response
 
+        elif "D" in message:
+            response = story_D(message)
+            return response
+
         elif "新聞" in message:
             # 呼叫 fetch_news_data 函數來獲取新聞
             news_response = fetch_news_data("性別歧視", news_api_key)
