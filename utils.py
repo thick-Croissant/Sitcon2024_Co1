@@ -33,6 +33,10 @@ def generate_gmini_story(prompt, api_key):
         else:
             logging.error("No generations found in response.")
             return "無法生成故事。"
+            
+    except Exception as e:
+        logging.error(f"Failed to generate story: {e}")
+        return "無法生成故事。"
 
 
 
