@@ -189,10 +189,10 @@ def story_D(message):
         return D1 + news
 
     elif "D-2" == message:
-        return D1 + news
+        return D2 + news
         
     elif "D-3" == message:
-        return D1 + news
+        return D3 + news
 
     else:
         return choose
