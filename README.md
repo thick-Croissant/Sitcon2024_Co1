@@ -1,79 +1,50 @@
-# FastAPI LINE Bot with Gemini AI and Firebase Integration
 
-This project is a FastAPI application that integrates with LINE Messaging API, Gemini AI, and Firebase to handle various types of messages and provide intelligent responses.
+#  Line性別平等機器人
 
-*此專案原檔為：https://github.com/louis70109/linebot-gemini-earthquake
-## Features
+## 競賽議題 & 子議題
+- 團隊名稱：{厚可頌}
+- 成員姓名：{許岑鎂}, {黃詩云}, {葉芷妤}, {林奇安}
+- 競賽議題：{平等起跑線：用科技打破歧視的根源}
+    - 子議題：{推廣性別平等與情感教育 X LINE}
 
-- **Health Check Endpoint**: Simple endpoint to check if the service is running.
-- **LINE Webhook Handler**: Handles incoming messages from LINE and responds accordingly.
-- **Gemini AI Integration**: Uses Gemini AI to process and generate responses based on the content of the messages.
-- **Firebase Integration**: Stores and retrieves chat history from Firebase.
 
-## Prerequisites
+### 專案簡介
+- 用途/功能：
 
-- Python 3.7+
-- LINE Messaging API account
-- Gemini AI API key
-- Firebase project
-- .env file with the following environment variables:
-  - `API_ENV`
-  - `LINE_CHANNEL_SECRET`
-  - `LINE_CHANNEL_ACCESS_TOKEN`
-  - `LOG`
-  - `FIREBASE_URL`
-  - `GEMINI_API_KEY`
-  - `OPEN_API_KEY`
+- 目標客群&使用情境：
+    - 學生：可使用情境模擬來理解與反思生活上相似的情況發生
+    - 一般民眾：查找近期性別相關新聞，提升對相關議題的認識
+    - 供政府官員、城市規畫師、交通管理員以及其他公共部門工作人員快速分析大數據
 
-## Installation
+- 操作方式：
+    - 環境設置
+        1. 可以看到 .env 檔案新增了兩個 API，
+            * OPENAI_API_KEY<br>
+            此為必需新增的 API，否則無法與智慧城市對話。
+            * LANGCHAIN_API_KEY<br>
+            此為開發用 API，可以透過 LangSmith 看清楚整體 Chain 流程。可加可不加
+        2. 必須把修改後的 .env 檔案複製進 Taipei-City-Dashboard-AI 資料夾裡
+    - 使用者操作方式<br>
+        只需點擊智慧城市按鈕，之後並可與之對話。
 
-1. Clone the repository:
-    ```bash
-    git clone <repository_url>
-    cd <repository_directory>
-    ```
+### 使用資源
+- 企業資源：
+    - { OpenAI }<br>
+    我們所選用的模型。
+- 公開資源：
+    - {LangChain}<br>
+    有了這個 package，可以更輕鬆的客製化我們的模型。
 
-2. Create and activate a virtual environment:
-    ```bash
-    python -m venv venv
-    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
-    ```
+### 你還想分享的事情
+- 開發過程
+  - 我們在前端設計了一些看似無用實則無用的功能:3
+  - 後端非常的炸裂，全部擠在一個 app.py 裡面
+- 遇到的困難
+  - 在進行這次的專案之前我們對開發幾乎一無所知，唯一清楚的只有我們想做的事
+  - 原本以為只要 figma 用一用就好了，結果是要真的做出東西來。然後發現自己前端後端資料庫和網站原理都不懂，笑死。
+- 非常好commit訊息，簡單明瞭!<br>
+![image](https://hackmd.io/_uploads/SkfcTPvvA.png)
 
-3. Install the dependencies:
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-4. Create a `.env` file in the root directory and add the required environment variables.
-
-## Usage
-
-1. Run the FastAPI application:
-    ```bash
-    uvicorn main:app --host 0.0.0.0 --port 8080 --reload
-    ```
-
-2. The application will start and listen for incoming requests on the specified port.
-
-## Endpoints
-
-- **GET /health**: Health check endpoint to verify if the service is running.
-- **POST /webhooks/line**: Webhook endpoint to handle incoming messages from LINE.
-
-## Environment Variables
-
-- `API_ENV`: Set to `production` or `develop`.
-- `LINE_CHANNEL_SECRET`: Your LINE channel secret.
-- `LINE_CHANNEL_ACCESS_TOKEN`: Your LINE channel access token.
-- `LOG`: Logging level (default is `WARNING`).
-- `FIREBASE_URL`: Your Firebase database URL.
-- `GEMINI_API_KEY`: Your Gemini AI API key.
-- `OPEN_API_KEY`: Your Open Data API key.
-
-## Logging
-
-The application uses Python's built-in logging module. The log level can be set using the `LOG` environment variable.
-
-## License
-
-This project is licensed under the MIT License.
+### 成果展示
+- 可附上其他專案介紹的投影片/文件等等
+> SITCON Hackathon 2024
