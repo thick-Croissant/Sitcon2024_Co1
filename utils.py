@@ -76,7 +76,7 @@ def story_A(message):
 def story_B(message):
     news="https://www.parenting.com.tw/article/5092375"
 
-    elif "小葉的故事" in message:
+    if "小葉的故事" in message:
         return 0
             
     elif "B-1" or "B-2" in message:
