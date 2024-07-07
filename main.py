@@ -55,7 +55,7 @@ async def process_user_message(message, user_id):
     """
     try:
         
-        if "情境" in message:
+        if "情境模擬" == message:
             return "選擇一個喜歡的劇本吧！"
             
         elif "A" in message:
