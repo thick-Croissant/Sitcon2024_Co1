@@ -175,7 +175,7 @@ def story_D(message):
             "艾麗絲重新思考後，決定繼續為性別平等而努力"
             )
     
-    if "D.多元社區裡！" == message:
+    if "D多元社區裡！" == message:
         return start
         
     elif "D-1" == message:
