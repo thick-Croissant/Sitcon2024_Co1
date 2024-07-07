@@ -99,10 +99,6 @@ async def process_user_message(message, user_id):
             response = await generate_story_based_on_news(news_api_key, gmini_api_key)
             return response if response else "生成故事時出現錯誤。"
 
-        elif "B" in message:
-            
-
-        
         else:
             # 生成基於用戶輸入的通用回應
             response = generate_gmini_story(prompt=message, api_key=gmini_api_key)
