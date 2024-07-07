@@ -67,7 +67,7 @@ def story_A(message):
            "雖然你沒有說出自己的想法，但心裡一直覺得不舒服。下課後，你和朋友討論了這件事，決定下次遇到類似的情況一定要勇敢表達自己的意見。\n"+
            "這次經歷讓你明白，挑戰性別刻板印象需要勇氣和行動，下次遇到類似的情況，試著勇敢一點，表達你的想法吧！")
     
-    if "A開始體驗劇本：超級英雄訓練營！" == message:
+    if "A.超級英雄訓練營！" == message:
         return start
         
     elif "A-1" == message:
@@ -137,7 +137,7 @@ def story_C(message):
            "小藍和小粉因為沒有找到彼此都能接受的方式，最終沒能一起玩耍，只能各自回家，心裡感到有些失落。")
 
     
-    if "C開始體驗劇本：彩虹王國的冒險" == message:
+    if "C.彩虹王國的冒險" == message:
         return start
         
     elif "C-1" == message:
@@ -182,7 +182,7 @@ def story_D(message):
             "艾麗絲重新思考後，決定繼續為性別平等而努力"
             )
     
-    if "D多元社區裡！" == message:
+    if "D.小雨的故事" == message:
         return start
         
     elif "D-1" == message:
