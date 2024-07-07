@@ -54,7 +54,22 @@ async def process_user_message(message, user_id):
     處理用戶發送的消息並返回相應的回應。
     """
     try:
-        if "新聞" in message:
+         if "情境" in message:
+            return "選擇一個喜歡的劇本吧！"
+            
+        elif "A" in message:
+            response = story_A(message)
+            return response
+            
+        elif "B" in message:
+            response = story_B(message)
+            return response
+            
+        elif "C" in message:
+            response = story_C(message)
+            return response
+
+        elif "新聞" in message:
             # 呼叫 fetch_news_data 函數來獲取新聞
             news_response = fetch_news_data("性別歧視", news_api_key)
             if news_response and news_response.get("status") == "ok":
@@ -79,8 +94,6 @@ async def process_user_message(message, user_id):
             response = await generate_story_based_on_news(news_api_key, gmini_api_key)
             return response if response else "生成故事時出現錯誤。"
 
-        elif "情境模擬" or "模擬" in message:
-            return 0
 
         elif "小葉的故事" in message:
             return 0
