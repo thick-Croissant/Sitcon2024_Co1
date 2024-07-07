@@ -129,7 +129,7 @@ async def generate_story_based_on_news(news_api_key, gmini_api_key):
                 
                 if story_response:
                     story_text = story_response
-                    response = f"新聞：\n\n標題: {news_title}\n\n描述: {news_description}\n\n故事：\n{story_text}\n\n更多詳情: {news_url}"
+                    response = f"故事：\n{story_text}\n\n新聞標題: {news_title}\n\n描述: {news_description}\n\n更多詳情: {news_url}"
                     return response
         return None
 
