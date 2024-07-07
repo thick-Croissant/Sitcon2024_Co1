@@ -14,37 +14,36 @@
 - 目標客群&使用情境：
     - 學生：可使用情境模擬來理解與反思生活上相似的情況發生
     - 一般民眾：查找近期性別相關新聞，提升對相關議題的認識
-    - 供政府官員、城市規畫師、交通管理員以及其他公共部門工作人員快速分析大數據
+
 
 - 操作方式：
     - 環境設置
-        1. 可以看到 .env 檔案新增了兩個 API，
-            * OPENAI_API_KEY<br>
-            此為必需新增的 API，否則無法與智慧城市對話。
-            * LANGCHAIN_API_KEY<br>
-            此為開發用 API，可以透過 LangSmith 看清楚整體 Chain 流程。可加可不加
-        2. 必須把修改後的 .env 檔案複製進 Taipei-City-Dashboard-AI 資料夾裡
-    - 使用者操作方式<br>
-        只需點擊智慧城市按鈕，之後並可與之對話。
+      可以看到 .env 檔案有各種 API，
+        * LINE_CHANNEL_ACCESS_TOKEN、LINE_CHANNEL_SECRET<br>
+        此為必需新增的 API，否則無法使用LINE Bot。
+        * NEWS_API_KEY<br>
+        連接至新聞
+        * GEMINI_API_KEY<br>
+        連接至GEMINI，獲取生成式AI的回覆
+        * FIREBASE_URL<br>
+        連接至FIREBASE資料庫
 
 ### 使用資源
-- 企業資源：
-    - { OpenAI }<br>
-    我們所選用的模型。
+- 工作仿資源：
+    -  https://github.com/louis70109/linebot-gemini-earthquake <br>
+    我們改編專案的來源
 - 公開資源：
-    - {LangChain}<br>
-    有了這個 package，可以更輕鬆的客製化我們的模型。
+    - LINE Bot <br>
+    用於管理LINE Bot帳號
 
 ### 你還想分享的事情
 - 開發過程
-  - 我們在前端設計了一些看似無用實則無用的功能:3
-  - 後端非常的炸裂，全部擠在一個 app.py 裡面
+  - 第一次參加，什麼都是第一次用，真的太困難了qwq
+  - 好累歐qq GCP跑超慢
 - 遇到的困難
-  - 在進行這次的專案之前我們對開發幾乎一無所知，唯一清楚的只有我們想做的事
-  - 原本以為只要 figma 用一用就好了，結果是要真的做出東西來。然後發現自己前端後端資料庫和網站原理都不懂，笑死。
-- 非常好commit訊息，簡單明瞭!<br>
-![image](https://hackmd.io/_uploads/SkfcTPvvA.png)
+  - 改編別人的程式要理解一~~大段時間
+  - 原本以為連接API很簡單，結果格式什麼的需要處理，連接還一堆error
+ 
+### 在這邊感謝LINE的工程師們提供的幫助<3
 
-### 成果展示
-- 可附上其他專案介紹的投影片/文件等等
 > SITCON Hackathon 2024
