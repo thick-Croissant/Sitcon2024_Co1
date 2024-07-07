@@ -3,6 +3,8 @@ import logging
 import google.generativeai as genai
 import os
 
+choose = "請輸入選擇編號。如【A-1】"
+
 def fetch_news_data(query, api_key):
     """
     Fetch news data from News API with a focus on Traditional Chinese (Taiwan) content.
@@ -32,7 +34,7 @@ def generate_gmini_story(prompt, api_key):
             logging.error("No generations found in response.")
             return "無法生成故事。"
 
-choose = "請輸入選擇編號。如【A-1】"
+
 
 def story_A(message):
     news = "\n\n改寫至: https://www.asahi.com/articles/ASQ3467CHQ2XUHBI050.html"
