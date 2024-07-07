@@ -33,6 +33,7 @@ def generate_gmini_story(prompt, api_key):
             return "無法生成故事。"
 
 choose = "請輸入選擇編號。如【A-1】"
+
 def story_A(message):
     news = "\n\n改寫至: https://www.asahi.com/articles/ASQ3467CHQ2XUHBI050.html"
     start = ("歡迎來到超級英雄訓練營！在這裡，我們不分男女，每個人都有機會成為超級英雄！今天，我們要學習如何辨別和挑戰不公平的性別刻板印象。準備好了嗎？\n\n"+
