@@ -13,7 +13,7 @@ from linebot.v3.messaging import (
 )
 from linebot.v3.exceptions import InvalidSignatureError
 from linebot.v3.webhooks import MessageEvent, TextMessageContent
-from utils import fetch_news_data, generate_gmini_story
+from utils import fetch_news_data, generate_gmini_story, story_A, story_B, story_C
 
 # 如果不是在生產環境中，則載入 .env 文件中的環境變量
 if os.getenv('API_ENV') != 'production':
