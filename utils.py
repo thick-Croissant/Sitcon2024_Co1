@@ -77,7 +77,7 @@ def story_A(message):
 def story_B(message):
     news="https://www.parenting.com.tw/article/5092375"
 
-    if "小葉的故事" in message:
+    if "B.小葉的故事" in message:
         return 0
             
     elif "B-1" or "B-2" in message:
@@ -175,7 +175,7 @@ def story_D(message):
             "艾麗絲重新思考後，決定繼續為性別平等而努力"
             )
     
-    if "D多元社區裡！" == message:
+    if "D.多元社區裡！" == message:
         return start
         
     elif "D-1" == message:
