@@ -95,7 +95,9 @@ def story_B(message):
 
     elif "B-4" in message::
         return "小葉和他的朋友們低調處理後，創建了一個友善和包容的小圈子。他們的影響範圍雖然有限，但這種變化是真實而深遠的。小葉在朋友的支持下，逐漸成長為一個堅強和自信的人。他們的小圈子成為了一個溫暖的避風港，讓更多人感受到平等和包容的力量。\nhttps://www.parenting.com.tw/article/5092375"
-
+    
+    else:
+        return choose
     
 def story_C(message):
     news = "\n\n改寫至: https://consent.yahoo.com/v2/collectConsent?sessionId=1_cc-session_c8aaa472-fca0-40ad-90d3-f4a2c818ea8f"
@@ -152,9 +154,6 @@ def story_C(message):
     else:
         return choose
 
-    except Exception as e:
-        logging.error(f"Failed to generate story: {e}")
-        return "無法生成故事。"
 
 def story_D(message):
     news = "\n\n改寫至: https://tw.news.yahoo.com/%E5%A5%B3%E5%8A%9B%E5%89%8D%E9%80%B2%E7%BF%BB%E8%BD%89%E7%A4%BE%E5%8D%80-%E5%A4%9A%E5%85%83%E5%9C%98%E9%AB%94%E5%A5%B3%E5%8A%9B%E8%B5%B0%E5%85%A5%E7%A4%BE%E5%8D%80%E7%99%BC%E6%8F%AE%E5%BD%B1%E9%9F%BF%E5%8A%9B-143053407.html"
